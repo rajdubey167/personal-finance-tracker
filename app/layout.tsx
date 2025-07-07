@@ -24,10 +24,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 0.8,
-  maximumScale: 2,
-  minimumScale: 0.8,
-  userScalable: true,
+  initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export const dynamic = 'force-static'
@@ -44,7 +42,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased text-[87.5%]`} suppressHydrationWarning>
         <MainLayout>{children}</MainLayout>
         <Toaster />
       </body>

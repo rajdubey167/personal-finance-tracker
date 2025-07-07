@@ -45,6 +45,7 @@
 }
 
 :root {
+  font-size: 87.5%; /* This is equivalent to about 80% zoom */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
