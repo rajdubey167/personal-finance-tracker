@@ -1,5 +1,5 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import MainLayout from '@/components/layout/MainLayout'
 import { Toaster } from '@/components/ui/toaster'
@@ -20,7 +20,14 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Personal Finance Tracker',
   description: 'Track your personal finances with ease',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 0.8,
+  maximumScale: 2,
+  minimumScale: 0.8,
+  userScalable: true,
 }
 
 export const dynamic = 'force-static'
@@ -34,11 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} font-sans`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`} suppressHydrationWarning>
         <MainLayout>{children}</MainLayout>
         <Toaster />
       </body>
