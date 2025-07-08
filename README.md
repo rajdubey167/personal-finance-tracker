@@ -31,7 +31,6 @@ A modern, full-stack personal finance management application built with Next.js 
 
 ### 🎨 **Modern UI/UX**
 - Responsive design for all devices
-- Dark/light mode support
 - Smooth animations and transitions
 - Toast notifications for user feedback
 - Loading skeletons for better UX
